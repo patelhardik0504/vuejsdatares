@@ -8,10 +8,12 @@
                 <div class="p-4 bg-white">
                     
 
-                    You are Home !
-
+                    You are Home !sds
+                    <ProductList />
 
                 </div>
+
+                
             </div>
         </div>
     </div>
@@ -21,10 +23,11 @@
 
 
 <script>
+import ProductList from './ItemList.vue'
+
 export default {
-    data() {
-        return {
-        }
-    }
-}
+  components: {
+    ProductList
+  }
+};
 </script>

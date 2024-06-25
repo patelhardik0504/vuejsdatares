@@ -36,6 +36,11 @@
                         </div>
                     </form>
 
+                    <form @submit.prevent="submitForm">
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" id="phone" v-model="phone" v-mask="'+1 (##) #####-####'" required>
+                        <button type="submit">Submit</button>
+                    </form>
 
     </div>
 </template>
@@ -61,6 +66,8 @@ export default {
             errors : null,
             success : '' ,
             busy : false ,
+            phone: ''
+
 
         }
     },

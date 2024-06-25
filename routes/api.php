@@ -58,3 +58,6 @@ Route::middleware('auth:sanctum')->group(function () {
 
 });
 Route::get('/user', UserController::class);
+
+Route::apiResource('items', 'App\Http\Controllers\ItemController');
+    

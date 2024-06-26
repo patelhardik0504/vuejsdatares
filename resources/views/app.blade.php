@@ -24,6 +24,44 @@
 
         <div id="app"></div>
 
+        <form id="myForm">
+    <label for="exampleSelect">Example Select:</label>
+    <select name="exampleSelect" id="exampleSelect">
+        <option value="value1">Option 1</option>
+        <option value="value2">Option 2</option>
+        <option value="value3">Option 3</option>
+    </select><br>
+<input type="text" >
+    <label for="fileUpload">File Upload:</label>
+    <input type="file" name="fileUpload" id="fileUpload"><br>
+
+    <!-- Add more fields as needed -->
+
+    
+</form>
+
+<button type="button" id="disableButton">Disable Fields</button>
+    <button type="button" id="enableButton">Enable Fields</button>
+
         <script src="{{mix('js/app.js')}}"></script>
+
+        <script>
+        $(document).ready(function() {
+            // Function to disable or enable form fields
+            function toggleFormFields(disable) {
+                $('#myForm :input').prop('disabled', disable);
+            }
+            
+            // Example of disabling fields on button click
+            $('#disableButton').click(function() {
+                toggleFormFields(true); // Disable all fields
+            });
+
+            $('#enableButton').click(function() {
+                console.log('asdasda');
+                toggleFormFields(false); // Enable all fields
+            });
+        });
+    </script>
     </body>
 </html>

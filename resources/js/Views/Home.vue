@@ -9,12 +9,15 @@
                     
 
                     You are Home !sds
-                    <ProductList />
+                    <!-- <Posts /> -->
 
                 </div>
-                <tabList>
-                  </tabList>
-                  <select name="" id="" ref="select" v-model="selectedValue" multiple>
+                <!-- <tabList>
+                  </tabList> -->
+                 <SelectMultiple>
+                  
+                 </SelectMultiple>
+                  <!-- <select name="" id="" ref="select" v-model="selectedValue" multiple>
                     <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
@@ -24,7 +27,7 @@
         <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
-                  </select>
+                  </select> -->
 
         </div>
     </div>
@@ -39,12 +42,20 @@ import ProductList from './ItemList.vue'
 import tabList from './tabList.vue'
 import Checkbox from './Checkbox.vue'
 import SelectComponent from './SelectComponent.vue';
+import Posts  from './Posts.vue';
+import FileUpload from './FileErrorHandel.vue';
+import SelectMultiple from './SelectComponent.vue';
+
+
 
 
 export default {
   components: {
     ProductList,
-    tabList,SelectComponent
+    tabList,SelectComponent,
+    Posts ,
+    FileUpload,
+    SelectMultiple
     
   },
   mounted() {

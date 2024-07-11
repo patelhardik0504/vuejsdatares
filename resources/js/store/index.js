@@ -99,8 +99,11 @@ export default createStore({
      
                 commit('setUser', user);
 
-                var fin = form.is_approved == 0 ? false : true;
+                
+                
+                // var fin = form.is_approved == 0 ? false : true;
              
+                var fin = true;
                 if (form) {
                   commit('setFormSubmissionState', {
                     submitted: true,

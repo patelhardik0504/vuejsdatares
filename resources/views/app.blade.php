@@ -27,7 +27,7 @@
 
         <div id="app"></div>
 
-        <form id="myForm">
+        <!-- <form id="myForm">
     <label for="exampleSelect">Example Select:</label>
     <select name="exampleSelect" id="exampleSelect">
         <option value="value1">Option 1</option>
@@ -38,10 +38,10 @@
     <label for="fileUpload">File Upload:</label>
     <input type="file" name="fileUpload" id="fileUpload"><br>
 
-    <!-- Add more fields as needed -->
+  
 
     
-</form>
+</form> -->
 
 <button type="button" id="disableButton">Disable Fields</button>
     <button type="button" id="enableButton">Enable Fields</button>

@@ -22,15 +22,18 @@
     },
     "dependencies": {
         "@heroicons/vue": "^1.0.6",
+        "@vee-validate/rules": "^4.13.2",
         "bootstrap": "^5.3.3",
         "bootstrap-vue": "^2.23.1",
         "jquery": "^3.7.1",
         "moment": "^2.29.1",
         "select2": "^4.1.0-rc.0",
+        "vee-validate": "^4.13.2",
         "vform": "^2.1.2",
         "vue-router": "^4.0.13",
         "vue-the-mask": "^0.11.1",
         "vuex": "^4.0.2",
-        "vuex-shared-mutations": "^1.0.2"
+        "vuex-shared-mutations": "^1.0.2",
+        "yup": "^1.4.0"
     }
 }

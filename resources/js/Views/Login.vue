@@ -42,15 +42,15 @@
                         <router-link :to="{name : 'forgot-password'}" class="text-sm text-gray-500 hover:text-gray-800 hover:underline "> Fogot your password ? </router-link>
                         </div>
                     </form>
-
-                    
            
          </div>
             </div>
         </div>
     </div>
 </div>
-
+<div>
+    <Radio></Radio>
+</div>
 </template>
 
 
@@ -58,11 +58,13 @@
 import CircleSvg from '../components/CircleSvg.vue'
 import { XIcon } from '@heroicons/vue/solid';
 import Errors from '../components/Errors.vue';
+import Radio from './Radio.vue';
 export default {
     components : {
         XIcon,
         CircleSvg,
-        Errors
+        Errors,
+        Radio
     },
     data() {
         return {
@@ -88,6 +90,13 @@ export default {
             };
             this.busy = false ;
             
+        },
+        checkboxchecked()
+        {
+            if (confirm('If yoaskdj......')) {
+                alert('asd');
+                
+            }
         }
     },
     

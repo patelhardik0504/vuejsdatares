@@ -12,11 +12,12 @@
                     <!-- <Posts /> -->
 
                 </div>
-                <!-- <tabList>
-                  </tabList> -->
+                <ItemList>
+                  </ItemList>
+<!--                   
                  <SelectMultiple>
                   
-                 </SelectMultiple>
+                 </SelectMultiple> -->
                   <!-- <select name="" id="" ref="select" v-model="selectedValue" multiple>
                     <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
@@ -45,6 +46,7 @@ import SelectComponent from './SelectComponent.vue';
 import Posts  from './Posts.vue';
 import FileUpload from './FileErrorHandel.vue';
 import SelectMultiple from './SelectComponent.vue';
+import ItemList from './ItemList.vue';
 
 
 
@@ -55,7 +57,8 @@ export default {
     tabList,SelectComponent,
     Posts ,
     FileUpload,
-    SelectMultiple
+    SelectMultiple,
+    ItemList
     
   },
   mounted() {

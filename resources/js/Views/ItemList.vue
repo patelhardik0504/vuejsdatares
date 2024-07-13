@@ -10,6 +10,8 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Description</th>
+                    <th>radio</th>
+
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -19,8 +21,12 @@
                     <td>{{ item.name }}</td>
                     <td>{{ item.description }}</td>
                     <td>
+                        <input type="radio" @click="ChecktheRadio(item.id,$event)"  id="check1" name="check12" :checked="item.id == 3">
+                    </td>
+                    <td>
                         <button @click="editItem(item)" class="btn btn-primary btn-sm">Edit</button>
                         <button @click="deleteItem(item.id)" class="btn btn-danger btn-sm">Delete</button>
+                       
                     </td>
                 </tr>
             </tbody>
@@ -145,7 +151,18 @@ export default {
                         console.error('Error deleting item: ' + error);
                     });
             }
+        },
+        ChecktheRadio(id,event)
+        {
+            if (!confirm('You can delete!!')) {
+                event.preventDefault();
+                // Explicitly uncheck the radio button if "Cancel" is clicked
+                event.target.checked = false;
+            } else {
+                alert(id);
+            }
         }
+
     }
 };
 </script>

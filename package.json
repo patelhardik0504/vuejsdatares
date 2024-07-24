@@ -32,6 +32,7 @@
         "vform": "^2.1.2",
         "vue-router": "^4.0.13",
         "vue-the-mask": "^0.11.1",
+        "vue3-otp-input": "^0.5.21",
         "vuex": "^4.0.2",
         "vuex-shared-mutations": "^1.0.2",
         "yup": "^1.4.0"

@@ -31,6 +31,10 @@
                   </select> -->
 
         </div>
+        <h1>ha</h1>
+        <PasswordEye>
+
+        </PasswordEye>
     </div>
     </div>
 </div>
@@ -47,6 +51,7 @@ import Posts  from './Posts.vue';
 import FileUpload from './FileErrorHandel.vue';
 import SelectMultiple from './SelectComponent.vue';
 import ItemList from './ItemList.vue';
+import PasswordEye from './Eyepassword';
 
 
 
@@ -58,7 +63,8 @@ export default {
     Posts ,
     FileUpload,
     SelectMultiple,
-    ItemList
+    ItemList,
+    PasswordEye,
     
   },
   mounted() {

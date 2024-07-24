@@ -1,7 +1,7 @@
 <template>
 
 <div class="max-w-screen-md mx-auto text-gray-900">
-    <div class="flex justify-center">
+    <!-- <div class="flex justify-center">
         <div class="flex-1">
             <div class="border w-auto">
                 <div  class="border p-4  font-semibold">Log In</div>
@@ -46,10 +46,25 @@
          </div>
             </div>
         </div>
-    </div>
+    </div> -->
+<form action="">
+    <v-otp-input 
+    ref="otpInput"
+        input-classes="otp-input"
+        :conditionalClass="['one', 'two', 'three', 'four']"
+       
+        inputType="letter-numeric"
+        :num-inputs="6"
+        v-model:value="bindValue"
+        :should-auto-focus="true"
+        :should-focus-order="true"
+        class=""
+    />
+    <button type="submit"></button>
+</form>
+    
 </div>
 <div>
-    <Radio></Radio>
 </div>
 </template>
 
@@ -59,12 +74,14 @@ import CircleSvg from '../components/CircleSvg.vue'
 import { XIcon } from '@heroicons/vue/solid';
 import Errors from '../components/Errors.vue';
 import Radio from './Radio.vue';
+import PasswordEye from './Eyepassword';
 export default {
     components : {
         XIcon,
         CircleSvg,
         Errors,
-        Radio
+        Radio,
+        PasswordEye
     },
     data() {
         return {

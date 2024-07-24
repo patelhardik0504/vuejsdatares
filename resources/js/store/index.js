@@ -95,7 +95,8 @@ export default createStore({
                 const response = await axios.get('/api/user');
                
                 const user = response.data.user;
-                const form = response.data.form;
+                // const form = response.data.form;
+              let form =true;
      
                 commit('setUser', user);
 

@@ -11,6 +11,7 @@ use App\Http\Controllers\VerificationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +63,13 @@ Route::get('/user', UserController::class);
 
 Route::apiResource('items', 'App\Http\Controllers\ItemController');
 Route::get('/posts', [PostController::class, 'index']);
+
+Route::get('/data', [PostController::class, 'state']);
+Route::post('/save-selections', [PostController::class, 'SaveData']);
+
+Route::get('/user-profile', [PostController::class, 'getProfile']);
+
+
+
+
+Route::apiResource('user-profiles', UserProfileController::class);

@@ -23,8 +23,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'selections'
     ];
-
+   
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -42,6 +43,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'selections' => 'array',
     ];
 
 
@@ -52,5 +54,18 @@ class User extends Authenticatable implements MustVerifyEmail
     public function sendEmailVerificationNotification()
     {
         // $this->notify(new VerifyEmailNotification());
+    }
+
+ 
+
+    // Optionally, if you want to handle selections separately
+    public function setSelectionsAttribute($value)
+    {
+        $this->attributes['selections'] = json_encode($value);
+    }
+
+    public function getSelectionsAttribute($value)
+    {
+        return json_decode($value, true);
     }
 }

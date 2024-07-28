@@ -10,6 +10,8 @@ const Home = () => import('../Views/Home.vue');
 const Welcome = () => import('../Views/Welcome.vue')
 import FormComponent from '../Views/FormComponent.vue';
 import OtherComponent from '../Views/OtherComponent.vue';
+import MyHome from '../Views/MyHome.vue'; 
+import UserProfiles from '../Views/UserProfiles.vue'; 
 
 export default [{
         path: '/',
@@ -23,6 +25,22 @@ export default [{
         name: 'home',
         meta: {
             guard: 'auth'
+        }
+    },
+    {
+        path: '/my-home',
+        component: MyHome,
+        name: 'home',
+        meta: {
+            guard: 'guest'
+        }
+    },
+    {
+        path: '/crud',
+        component: UserProfiles,
+        name: 'home',
+        meta: {
+            guard: 'guest'
         }
     },
     {
